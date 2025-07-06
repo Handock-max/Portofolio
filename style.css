@@ -182,8 +182,8 @@ a:hover {
   text-decoration: underline;
 }
 
-*/ version phone mobile */
-*/ Boutons de navigation en bas */
+/* version phone mobile */
+/* Boutons de navigation en bas */
 @media screen and (max-width: 768px) {
   body {
     flex-direction: column;
