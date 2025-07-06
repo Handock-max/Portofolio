@@ -3,37 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio Martin de Tours</title>
+  <title>Martin de Tours</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;600&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="mainpage">
+  <!-- Navigation -->
+  <nav class="sidebar">
+    <img src="Profile.jpeg" alt="Photo Akashi" class="profile-pic" />
+    <div class="nav-buttons">
+      <button class="nav-button" data-target="accueil">Accueil</button>
+      <button class="nav-button" data-target="cv">Parcours</button>
+      <button class="nav-button" data-target="projets">Projets</button>
+      <button class="nav-button" data-target="contact">Contact</button>
+    </div>
+  </nav>
 
-  <div class="container">
+  <!-- Contenu principal -->
+  <main class="content">
+    <!-- Section Accueil -->
+    <section id="accueil" class="section active">
+      <h1>Bienvenue sur mon portfolio</h1>
+      <p>Je suis Martin de Tours, manager de projet, analyste de données et entrepreneur en tech.</p>
+      <div class="highlights">
+        <div class="kpi">+10 projets livrés</div>
+        <div class="kpi">+5 équipes encadrées</div>
+        <div class="kpi">3 start-ups lancées</div>
+      </div>
+    </section>
 
-    <!-- Image de profil -->
-    <img src="Profile.jpeg" alt="Photo de Martin de Tours" class="profile-pic" />
+    <!-- Section CV -->
+    <section id="cv" class="section hidden">
+      <h2>Parcours & Réalisations</h2>
+      <div class="cv-section">
+        <h3>Expérience</h3>
+        <ul>
+          <li><strong>Consultant BI</strong> - Entreprise X (2023-2025)</li>
+          <li><strong>Manager projet terrain</strong> - Start-up Y (2021-2023)</li>
+        </ul>
+      </div>
+      <div class="cv-section">
+        <h3>Compétences</h3>
+        <ul>
+          <li>Data Analysis, Google Sheets avancé</li>
+          <li>n8n, Airtable, Baserow, Looker Studio</li>
+          <li>Gestion d'équipe & stratégie produit</li>
+        </ul>
+      </div>
+    </section>
 
-    <!-- Texte central -->
-    <h1 class="brand">Martin de Tours</h1>
+    <!-- Section Projets -->
+    <section id="projets" class="section hidden">
+      <h2>Projets en cours et à venir</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Mibo</h3>
+          <p>Plateforme de vente d'occasion avec enchères, wallet et livraison intégrée.</p>
+        </div>
+        <div class="project-card">
+          <h3>App School</h3>
+          <p>Système de gestion scolaire temps réel pour parents, professeurs et direction.</p>
+        </div>
+      </div>
+    </section>
 
-    <p class="subtitle">
-      Manager d'équipe et de projet, Consultant BI,<br>
-      Analyste de données & Entrepreneur.
-    </p>
+    <!-- Section Contact -->
+    <section id="contact" class="section hidden">
+      <h2>Me contacter</h2>
+      <p>Email : <a href="mailto:akashi@excellence.com">akashi@excellence.com</a></p>
+      <p>Téléphone : +228 90 00 00 00</p>
+      <p>LinkedIn : <a href="#">linkedin.com/in/akashi</a></p>
+    </section>
+  </main>
 
-    <!-- Navigation -->
-    <nav class="nav">
-      <a href="cv.html">Parcours</a>
-      <a href="projets.html">Projets</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- Script JS -->
+  <script src="main.js"></script>
 
+  <div class="loader-overlay hidden">
+        <div class="loader"></div>
   </div>
-
-  <script src="script.js"></script>
-<div class="loading-overlay">
-  <div class="loader"></div>
-</div>
 </body>
 </html>
