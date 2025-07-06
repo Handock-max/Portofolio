@@ -1,0 +1,161 @@
+/* Import des polices (en cas de chargement direct CSS uniquement) */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Inter:wght@400;600&family=Raleway:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  width: 90%;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+  margin-bottom: 20px;
+}
+
+.brand {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ddd;
+  margin-bottom: 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-weight: 600;
+  color: #00BFFF;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+  background-color: #00BFFF;
+  color: #000;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #00BFFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+/* Styles spécifiques pour la page CV */
+.cv-page {
+  background-color: rgba(0, 0, 0, 0.7); /* Un fond plus sombre si besoin */
+  color: #f0e68c; /* Couleur or clair */
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.cv-page .container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(10, 10, 10, 0.85);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #d4af37cc;
+}
+
+.cv-page .brand {
+  font-family: 'Cinzel', serif;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #ffd700; /* Or vif */
+  text-align: center;
+}
+
+.cv-page .section-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ffec8b;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 5px;
+}
+
+.cv-page .company {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #fffacd;
+  font-style: italic;
+}
+
+.cv-page ul.missions,
+.cv-page ul.competences {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: disc;
+  color: #f5f5dc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.cv-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f5f5dc;
+  margin-bottom: 20px;
+}
